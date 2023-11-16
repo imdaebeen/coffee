@@ -8,7 +8,7 @@ MySQL
 H2(테스트 코드)
 
 
-![image](https://github.com/imdaebeen/coffee/assets/33610314/35735042-fc0a-4124-addd-7c67d4fce1f6)
+![image](https://github.com/imdaebeen/coffee/assets/33610314/d56ae0b7-104e-42ec-91de-b13917264093)
 
 ![image](https://github.com/imdaebeen/coffee/assets/33610314/9608c3e6-fdf3-4812-8163-60c38dc79b46)
 
