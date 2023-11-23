@@ -1,13 +1,17 @@
+package main.java.com.daebeen.coffee.point.controller;
 
+import main.java.com.daebeen.coffee.point.application.PointService;
 
 @Tag(tags= "point")
 @RestController
-@RequOrderCreateRequest estMapping("/api/point")
+@RequOrderCreateRequest ("/api/point")
 public class PointController{
+    private final PointService pointService;
 
     @ApiOperation(value = "포인트 충전하기")
-    @PostMapping("/")
-    public String chargePoint(){
-        return "충전완료";
+    @PatchMapping("/{customerId}/charge")
+    public void chargePoint(@PathVariable("customerId") String customerId, @RequestParam(name = "chargingPoint") Long chargingPoint){
+        pointService.charge(customerId,chargingPoint);
     }
+
 }

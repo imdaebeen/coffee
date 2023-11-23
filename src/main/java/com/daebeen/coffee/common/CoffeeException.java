@@ -1,4 +1,4 @@
-
+package main.java.com.daebeen.coffee.common;
 
 public class CoffeeException extends java.lang.RuntimeException{
 

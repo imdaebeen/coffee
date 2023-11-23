@@ -1,3 +1,7 @@
+package main.java.com.daebeen.coffee.menu.domain;
+
+import main.java.com.daebeen.coffee.menu.application.MenuDto;
+
 public class Menu {
 
     private Long menuId;
@@ -9,4 +13,8 @@ public class Menu {
         this.menuPrice = menuPrice;
     }
 
+
+    public MenuDto toDto() {
+        return new MenuDto(menuName,menuName,menuPrice);
+    }
 }
