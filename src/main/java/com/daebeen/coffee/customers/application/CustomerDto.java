@@ -1,4 +1,4 @@
-package main.java.com.daebeen.coffee.customers.application;
+package com.daebeen.coffee.customers.application;
 
 public class CustomerDto{
 

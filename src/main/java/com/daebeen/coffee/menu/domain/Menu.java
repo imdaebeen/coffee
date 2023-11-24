@@ -1,6 +1,6 @@
-package main.java.com.daebeen.coffee.menu.domain;
+package com.daebeen.coffee.menu.domain;
 
-import main.java.com.daebeen.coffee.menu.application.MenuDto;
+import com.daebeen.coffee.menu.application.MenuDto;
 
 public class Menu {
 
@@ -15,6 +15,6 @@ public class Menu {
 
 
     public MenuDto toDto() {
-        return new MenuDto(menuName,menuName,menuPrice);
+        return new MenuDto(menuId,menuName,menuPrice);
     }
 }

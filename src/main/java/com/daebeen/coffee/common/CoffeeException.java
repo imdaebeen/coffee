@@ -1,6 +1,6 @@
-package main.java.com.daebeen.coffee.common;
+package com.daebeen.coffee.common;
 
-public class CoffeeException extends java.lang.RuntimeException{
+public class CoffeeException extends RuntimeException{
 
     private final CoffeeError error;
 

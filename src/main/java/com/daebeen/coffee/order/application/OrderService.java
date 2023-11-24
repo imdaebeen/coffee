@@ -1,16 +1,14 @@
-package main.java.com.daebeen.coffee.order.application;
+package com.daebeen.coffee.order.application;
 
-import main.java.com.daebeen.coffee.menu.application.MenuDto;
-import main.java.com.daebeen.coffee.menu.application.MenuService;
-import main.java.com.daebeen.coffee.order.domain.Order;
-import main.java.com.daebeen.coffee.order.domain.OrderRepository;
-import main.java.com.daebeen.coffee.order.domain.OrderRequest;
-import main.java.com.daebeen.coffee.point.application.PointService;
-
+import com.daebeen.coffee.menu.application.MenuDto;
+import com.daebeen.coffee.menu.application.MenuService;
+import com.daebeen.coffee.order.domain.Order;
+import com.daebeen.coffee.order.domain.OrderRepository;
+import com.daebeen.coffee.order.domain.OrderRequest;
+import com.daebeen.coffee.point.application.PointService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-//import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 
 
@@ -25,12 +23,10 @@ public class OrderService{
 
     PointService pointService;
 
-//    ApplicationEventPublisher applicationEventPublisher;
-
     public OrderDto createOrder(OrderRequest request){
-        final MenuDto menu = menuService.getMenu(request.getMenuId());
-        final Order order = new Order(new OrderRequest(menu, request.getCustomerId()));
-        pointService.pointPayment(request.getCustomerId(), order.getOrderPrice());
+        final MenuDto menu = menuService.getMenu(request.getMenu().getMenuId());
+        final Order order = new Order(new OrderRequest(menu, request.getCustomerId(), request.getCustomerSeq()));
+        pointService.pointPayment(request.getCustomerSeq(), order.getOrderPrice());
         final OrderDto orderDto = orderRepository.save(order).toDto();
 
         return orderDto;

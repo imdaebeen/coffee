@@ -1,7 +1,11 @@
-package main.java.com.daebeen.coffee.order.domain;
+package com.daebeen.coffee.order.domain;
 
 
-import main.java.com.daebeen.coffee.order.application.OrderDto;
+import com.daebeen.coffee.order.application.OrderDto;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 

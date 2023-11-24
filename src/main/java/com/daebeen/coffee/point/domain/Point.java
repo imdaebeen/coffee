@@ -1,6 +1,11 @@
-package main.java.com.daebeen.coffee.point.domain;
+package com.daebeen.coffee.point.domain;
 
-import main.java.com.daebeen.coffee.customers.domain.Customer;
+import com.daebeen.coffee.customers.domain.Customer;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 
 import java.time.LocalDateTime;
 
@@ -11,7 +16,7 @@ import java.time.LocalDateTime;
 public class Point {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long pointId;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false, cascade = CascadeType.PERSIST)
@@ -26,19 +31,19 @@ public class Point {
 
     private Point(Customer customer, Long point){
         this.customer = customer;
-        this.point = point;
+        this.pointAmt = point;
         transcatedAt = LocalDateTime.now();
     }
 
     public static Point createByPayment(Customer customer, Long point){
-        Point point = new Point(customer, point);
-        point.transactionType = TransactionType.PAYMENT;
-        return point;
+        Point paymentPoint = new Point(customer, point);
+        paymentPoint.transactionType = TransactionType.PAYMENT;
+        return paymentPoint;
     }
 
     public static Point createByCharge(Customer customer, Long point){
-        Point point = new Point(customer, point);
-        point.transactionType = TransactionType.CHARGE;
-        return point;
+        Point chargePoint = new Point(customer, point);
+        chargePoint.transactionType = TransactionType.CHARGE;
+        return chargePoint;
     }
 }

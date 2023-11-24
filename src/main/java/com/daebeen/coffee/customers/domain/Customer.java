@@ -1,4 +1,9 @@
-package main.java.com.daebeen.coffee.customers.domain;
+package com.daebeen.coffee.customers.domain;
+
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "CUSTOMER")

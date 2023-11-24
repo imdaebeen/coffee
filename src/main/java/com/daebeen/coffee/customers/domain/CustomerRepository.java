@@ -1,8 +1,6 @@
-package main.java.com.daebeen.coffee.customers.domain;
+package com.daebeen.coffee.customers.domain;
 
-import java.util.Optional;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
-    Optional<Customer> findByUserId(String customerId);
-
 }

@@ -1,4 +1,9 @@
-package main.java.com.daebeen.coffee.common;
+package com.daebeen.coffee.common;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.experimental.FieldDefaults;
 
 @Getter
 @AllArgsConstructor

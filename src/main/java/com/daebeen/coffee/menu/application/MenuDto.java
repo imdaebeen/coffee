@@ -1,4 +1,4 @@
-package main.java.com.daebeen.coffee.menu.application;
+package com.daebeen.coffee.menu.application;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

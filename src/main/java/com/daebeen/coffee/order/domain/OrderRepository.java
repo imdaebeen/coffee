@@ -1,5 +1,8 @@
-package main.java.com.daebeen.coffee.order.domain;
+package com.daebeen.coffee.order.domain;
 
-public interface OrderRepository {
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrderRepository extends JpaRepository<Order, Long> {
 
 }

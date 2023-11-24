@@ -1,16 +1,17 @@
-package main.java.com.daebeen.coffee.point.controller;
+package com.daebeen.coffee.point.controller;
 
-import main.java.com.daebeen.coffee.point.application.PointService;
+import com.daebeen.coffee.point.application.PointService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
 
-@Tag(tags= "point")
 @RestController
-@RequOrderCreateRequest ("/api/point")
+@RequestMapping("/api/point")
+@RequiredArgsConstructor
 public class PointController{
     private final PointService pointService;
 
-    @ApiOperation(value = "포인트 충전하기")
     @PatchMapping("/{customerId}/charge")
-    public void chargePoint(@PathVariable("customerId") String customerId, @RequestParam(name = "chargingPoint") Long chargingPoint){
+    public void chargePoint(@PathVariable("customerId") Long customerId, @RequestParam(name = "chargingPoint") Long chargingPoint){
         pointService.charge(customerId,chargingPoint);
     }
 

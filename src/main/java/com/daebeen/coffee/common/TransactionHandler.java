@@ -1,3 +1,4 @@
+package com.daebeen.coffee.common;
 
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;

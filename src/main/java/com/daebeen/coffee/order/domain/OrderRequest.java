@@ -1,10 +1,13 @@
-package main.java.com.daebeen.coffee.order.domain;
+package com.daebeen.coffee.order.domain;
 
-import main.java.com.daebeen.coffee.menu.application.MenuDto;
+import com.daebeen.coffee.menu.application.MenuDto;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-@Gette
+@Getter
 @AllArgsConstructor
 public class OrderRequest {
     private MenuDto menu;
-    private String userId;
+    private String customerId;
+    private Long customerSeq;
 }

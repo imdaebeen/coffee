@@ -1,17 +1,18 @@
+package com.daebeen.coffee.common.advice;
 
 public class ControllerAdvice {
 
 
     public String error(Exception e){
-        return ""
+        return "";
     }
 
     public String coffeeError(Exception e){
-        return ""
+        return "";
     }
 
-    public String coffeeBadRequestErro(){
-        return ""
+    public String coffeeBadRequestError(){
+        return "";
     }
 
 }

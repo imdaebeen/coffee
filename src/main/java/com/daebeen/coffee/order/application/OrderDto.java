@@ -1,4 +1,9 @@
-package main.java.com.daebeen.coffee.order.application;
+package com.daebeen.coffee.order.application;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDateTime;
 
